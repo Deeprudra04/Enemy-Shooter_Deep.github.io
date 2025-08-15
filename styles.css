@@ -173,10 +173,18 @@ body {
 
 .start-content h1 {
     font-size: 3em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #00ffff;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     animation: glow 2s ease-in-out infinite alternate;
+}
+
+.game-credit {
+    font-size: 1.2em;
+    color: #ffaa00;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-shadow: 0 0 5px rgba(255, 170, 0, 0.5);
 }
 
 .instructions {
