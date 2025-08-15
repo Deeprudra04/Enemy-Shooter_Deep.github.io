@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enemy Wave Shooter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="score-display">
+                <span class="score-label">Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="wave-display">
+                <span class="wave-label">Wave:</span>
+                <span id="wave">1</span>
+            </div>
+            <div class="lives-display">
+                <span class="lives-label">Lives:</span>
+                <span id="lives">3</span>
+            </div>
+            <div class="game-controls" id="gameControls">
+                <button class="control-btn pause-btn" id="pauseBtn">⏸️ PAUSE</button>
+                <button class="control-btn restart-btn" id="gameRestartBtn">🔄 RESTART</button>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls" id="mobileControls">
+            <div class="control-row">
+                <button class="control-btn move-btn" id="moveLeft" data-action="left">
+                    <span class="arrow">←</span>
+                </button>
+                <button class="control-btn fire-btn" id="fireBtn" data-action="fire">
+                    <span class="fire-icon">🚀</span>
+                    <span class="fire-text">FIRE</span>
+                </button>
+                <button class="control-btn move-btn" id="moveRight" data-action="right">
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div class="game-over-screen" id="gameOverScreen">
+            <div class="game-over-content">
+                <h2>Game Over</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Waves Survived: <span id="finalWave">0</span></p>
+                <button class="restart-btn" id="restartBtn">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div class="start-screen" id="startScreen">
+            <div class="start-content">
+                <h1>Enemy Wave Shooter</h1>
+                <div class="instructions">
+                    <h3>How to Play:</h3>
+                    <p><strong>Desktop:</strong> Use A/D or Arrow Keys to move, Spacebar to shoot</p>
+                    <p><strong>Mobile:</strong> Use the control buttons below</p>
+                    <p>Destroy enemies, avoid obstacles, survive the waves!</p>
+                </div>
+                <button class="start-btn" id="startBtn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Pause Screen -->
+        <div class="pause-screen" id="pauseScreen">
+            <div class="pause-content">
+                <h2>Game Paused</h2>
+                <button class="resume-btn" id="resumeBtn">Resume</button>
+                <button class="restart-btn" id="pauseRestartBtn">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
